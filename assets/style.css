@@ -12,11 +12,22 @@
 }
 
 :root {
-  --cor-principal: #191c20;
-  --cor-secundaria: #99a0af;
-  --cor-terciaria: #ff0048;
-  --cor-quaternaria: #c2cce0;
-  --cor-quintaria: #fff;
+  --cor-fundo: #191c20c5;
+  --cor-fundo-1: #191c20;
+  --cor-fundo-card: #090b0c;
+  --cor-borda: #99a0af;
+  --cor-borda-2: #191c25;
+  --cor-borda-botton-ranking: #6e001f;
+  --cor-borda-botton-title-sugestions: #ff0048;
+  --cor-borda-anuncio-2: #191c25;
+  --cor-borda-card-carrosel: #3a3d42;
+  --cor-destaque: #ff0048;
+  --cor-destaque-hover-1: #ff0048;
+  --cor-destaque-hover-2: #6e001f;
+  --cor-texto-primaria: #fff;
+  --cor-texto-secundaria: #c2cce0;
+  --cor-scrollbar: #ff0048;
+  --cor-scrollbar-hover: #6e001f;
 }
 
 html,
@@ -24,7 +35,17 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: var(--cor-principal);
+}
+
+main {
+  background: url(https://i.pinimg.com/736x/42/38/65/423865a31be36e5172bc3ddc6e37646f.jpg);
+  background-repeat: repeat;
+  background-size: 40%;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(0.9rem);
+  background-color: var(--cor-fundo);
+  background-blend-mode: overlay;
 }
 
 /*-------------------Header-------------------*/
@@ -35,6 +56,7 @@ header {
   justify-content: space-between;
   padding: 0rem 10%;
   box-sizing: border-box;
+  background-color: var(--cor-fundo-1);
 }
 
 .nav-principal {
@@ -47,19 +69,23 @@ header {
 
 .nav-principal a {
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   font-size: 2.5rem;
   font-weight: 600;
 }
 
+.nav-principal a img {
+  width: 3.5rem;
+}
+
 .nav-principal a:hover {
-  color: #ff0048;
+  color: var(--cor-destaque-hover-1);
   transition: 0.2s;
   text-decoration: underline;
 }
 
 .navegacao {
-  background-color: #ff0048;
+  background-color: var(--cor-destaque);
   width: 100%;
   box-sizing: border-box;
 }
@@ -91,7 +117,7 @@ header {
 .nav-secundaria a {
   width: 12rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   font-size: 2.2rem;
 }
 
@@ -101,11 +127,11 @@ header {
 
 h1 {
   font-style: italic;
-  color: #fff;
+  color: var(--cor-texto-primaria);
 }
 
 .span-header {
-  color: #ff0048;
+  color: var(--cor-destaque);
 }
 
 form {
@@ -113,10 +139,11 @@ form {
   align-items: center;
   justify-content: center;
   margin-left: 2rem;
-  border: 0.1rem solid #99a0af;
+  border: 0.1rem solid var(--cor-borda);
   border-radius: 2rem;
   width: 30%;
   font-family: sans-serif;
+  background-color: var(--cor-fundo);
 }
 
 #search {
@@ -124,14 +151,14 @@ form {
   height: 3rem;
   padding: 0.5rem;
   border: none;
-  background-color: var(--cor-principal);
-  color: white;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-primaria);
   font-size: 1.8rem;
 }
 
 #search::placeholder {
   font-size: 1.8rem;
-  color: #c2cce0;
+  color: var(--cor-texto-secundaria);
 }
 
 #search:focus {
@@ -156,8 +183,11 @@ form {
   margin: 2rem 0rem;
   font-family: sans-serif;
   position: relative;
-  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 0rem;
   overflow: hidden;
+  padding-bottom: 1rem;
+  border-bottom: 0.5rem solid var(--cor-destaque);
 }
 
 .carousel {
@@ -182,9 +212,9 @@ form {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.705);
   border: none;
-  color: white;
+  color: var(--cor-texto-primaria);
   font-size: 2rem;
   cursor: pointer;
   z-index: 5;
@@ -210,17 +240,22 @@ form {
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.493);
+  background-color: var(--cor-fundo-card);
   width: 28rem;
   height: 38rem;
   margin: 1rem;
   border-radius: 1rem;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   font-family: sans-serif;
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0.1rem 0.1rem 0.5rem #000;
-  border: 0.1rem solid #3a3d42;
+  border: 0.1rem solid var(--cor-borda-card-carrosel);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--cor-texto-primaria);
 }
 
 .card figure {
@@ -229,6 +264,12 @@ form {
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+.card:hover {
+  transform: scale(0.95);
+  transition: 0.2s;
+  border: 0.1rem solid var(--cor-destaque-hover-1);
 }
 
 .card figure img {
@@ -243,7 +284,7 @@ form {
   align-items: start;
   justify-content: center;
   margin: 0;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .card-info p.titulo {
@@ -253,11 +294,12 @@ form {
 }
 
 .card-info p.descricao {
-  color: #c2cce0;
+  color: var(--cor-texto-secundaria);
   font-size: 1.2rem;
   margin-top: 0.1rem;
   margin-bottom: 1rem;
   text-align: justify;
+
 }
 
 .card-info div {
@@ -268,6 +310,7 @@ form {
   gap: 1rem;
   width: 100%;
   margin-top: 0.1rem;
+
 }
 
 .card-info p.autor {
@@ -277,7 +320,7 @@ form {
 
 .card-info p.data {
   font-size: 1.3rem;
-  color: #c2cce0;
+  color: var(--cor-texto-secundaria);
 }
 
 .anuncio-principal {
@@ -292,31 +335,65 @@ form {
 .anuncio-principal img {
   width: 100%;
   height: 12rem;
-  border: 0.1rem solid #99a0af;
+  border: 0.1rem solid var(--cor-borda);
   border-radius: 1rem;
 }
 
 /*-------------------Ultimas Noticias-------------------*/
 
+.section-secundaria-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .section-secundaria {
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 2.5rem 0rem 2.5rem 1.2rem;
   font-family: sans-serif;
   gap: 2rem;
+  max-height: 85rem;
+  min-height: 70rem;
+  overflow-y: auto;
+  padding: 1rem 0rem 1rem 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--cor-fundo-1);
+  border-top: 0.1rem solid var(--cor-destaque);
+  border-bottom: 0.1rem solid var(--cor-destaque);
+}
+
+.section-secundaria::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.section-secundaria::-webkit-scrollbar-thumb {
+  background-color: var(--cor-scrollbar);
+  border-radius: 1rem;
+}
+
+.section-secundaria::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cor-scrollbar-hover);
 }
 
 .card-ultimas-noticias {
   width: 99%;
   height: 25rem;
-  border-radius: 1rem;
-  border: 0.1rem solid #99a0af;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: var(--cor-fundo-card);
+  border-radius: 1.5rem;
+}
+
+.card-ultimas-noticias:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  border: 0.1rem solid var(--cor-destaque-hover-1);
 }
 
 .card-ultimas-noticias figure {
@@ -325,29 +402,48 @@ form {
   gap: 2.5rem;
   align-items: center;
   justify-content: center;
-  margin-left: -0.2rem;
 }
 
 .card-ultimas-noticias figure img {
   width: 30rem;
   height: 20rem;
   border-radius: 1rem;
-  border: 0.1rem solid #99a0af;
+  border: 0.1rem solid var(--cor-borda);
+}
+
+.card-ultimas-noticias figure img:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  border: 0.1rem solid var(--cor-borda-2);
 }
 
 .card-info-noticias {
-  color: #fff;
-  width: 54rem;
+  color: var(--cor-texto-primaria);
+  width: 52rem;
 }
 
 .card-info-noticias .titulo {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  width: 100%;
+  color: var(--cor-texto-primaria);
+  text-decoration: none;
+}
+
+.card-info-noticias .titulo:visited {
+  color: var(--cor-texto-primaria);
+  text-decoration: none;
+}
+
+.card-info-noticias .titulo:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--cor-destaque-hover-1);
 }
 
 .card-info-noticias .descricao {
-  color: #c2cce0;
+  color: var(--cor-texto-secundaria);
   font-size: 1.5rem;
   margin-bottom: 0.1rem;
   text-align: justify;
@@ -368,15 +464,7 @@ form {
 
 .card-info-noticias .data {
   font-size: 1.5rem;
-  color: #c2cce0;
-}
-
-.card-ultimas-noticias .anuncio-secundario img {
-  width: 25rem;
-  height: 20rem;
-  border: 0.1rem solid #191c20;
-  border-radius: 1rem;
-  margin-left: 2rem;
+  color: var(--cor-texto-secundaria);
 }
 
 /*-------------------Ranking-------------------*/
@@ -388,12 +476,14 @@ form {
   justify-content: start;
   font-family: sans-serif;
   width: 25.5rem;
-  height: 69rem;
+  height: 85rem;
   margin: 35rem 0rem 0rem 2rem;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   border-radius: 1rem;
-  border: 0.1rem solid #191c20;
-  background-color: rgba(0, 0, 0, 0.493);
+  padding: 1rem 0;
+  border: 0.1rem solid var(--cor-borda-2);
+  background-color: var(--cor-fundo-card);
+  margin-top: -0.3rem;
 }
 
 .ranking-melhores h1 {
@@ -415,7 +505,7 @@ form {
   padding-bottom: 0.7rem;
   width: 20rem;
   height: 6.5rem;
-  border-bottom: 0.1rem solid #6e001f;
+  border-bottom: 0.1rem solid var(--cor-borda-botton-ranking);
 }
 
 .ranking-anime {
@@ -444,7 +534,7 @@ form {
   height: 2rem;
   margin-left: 1rem;
   border-radius: 1rem;
-  border: 0.1rem solid #191c20;
+  border: 0.1rem solid var(--cor-borda-2);
 }
 
 .ranking h2 {
@@ -464,6 +554,14 @@ form {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  background-color: var(--cor-fundo-card);
+  border-radius: 1.5rem;
+  padding: 1.2rem 2rem;
+  margin-top: 3rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  border-top: 0.1rem solid var(--cor-destaque);
+  border-bottom: 0.1rem solid var(--cor-destaque);
 }
 
 .card-noticias-t {
@@ -471,24 +569,62 @@ form {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: -34rem;
+  gap: 2rem;
+  height: 35rem;
+  margin-left: -0.85rem;
+  background-color: var(--cor-fundo-card);
 }
 
-.card-noticias-t figure {
+.anuncios-secundarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35rem;
+  margin-left: -1rem;
+}
+
+.anuncio-secundario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  width: 25rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 0.1rem solid var(--cor-destaque);
+  border-top: 0.1rem solid var(--cor-destaque);
+}
+
+.anuncio-secundario img {
+  width: 25rem;
+  height: 20rem;
+  border: 0.1rem solid var(--cor-borda-anuncio-2);
+  border-radius: 1rem;
+}
+
+.card-noticias-t a {
   display: flex;
   flex-direction: column;
   width: 29rem;
-  background-color: rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
+  border: 0.1rem solid var(--cor-borda);
   margin-right: -0.5rem;
+  text-decoration: none;
 }
 
-.card-noticias-t figure img {
-  border: 0.1rem solid #99a0af;
+.card-noticias-t a:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+  border: 0.1rem solid var(--cor-borda-2);
+}
+
+.card-noticias-t a img {
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
-.card-noticias-t figure figcaption {
+.card-noticias-t a figcaption {
   display: flex;
   flex-direction: column;
   width: 28rem;
@@ -497,7 +633,7 @@ form {
 .card-noticias-t .titulo-noticias {
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   margin: 1rem 0 1rem 1.2rem;
   text-align: justify;
 }
@@ -505,12 +641,12 @@ form {
 .card-noticias-t .autor {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--cor-texto-primaria);
 }
 
 .card-noticias-t .data-noticias {
   font-size: 1rem;
-  color: #c2cce0;
+  color: var(--cor-texto-secundaria);
 }
 
 /*-------------------Sugestions-------------------*/
@@ -528,8 +664,11 @@ form {
   align-items: left;
   justify-content: center;
   font-family: sans-serif;
-  margin: 4rem 3rem;
+  margin: 4rem 0.8rem;
+  border-radius: 1rem;
   width: 35rem;
+  background-color: var(--cor-fundo-card);
+  padding: 2rem;
 }
 
 .card-notice {
@@ -538,22 +677,22 @@ form {
   align-items: left;
   justify-content: flex-start;
   margin: 1.5rem 0 -1.5rem 0;
-  border: 0.1rem solid #191c20;
   border-radius: 1rem;
+  background-color: var();
 }
 
 .sugestions-notice .anime {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   margin: 0 0.5rem;
-  border-bottom: 0.3rem solid #ff0048;
+  border-bottom: 0.3rem solid var(--cor-borda-botton-title-sugestions);
 }
 
 .card-notice figure img {
   width: 14rem;
   border-radius: 1rem;
-  border: 0.1rem solid #191c20;
+  border: 0.1rem solid var(--cor-borda-2);
 }
 
 .card-notice figure {
@@ -562,11 +701,17 @@ form {
   margin: 1rem 0 1rem 0;
 }
 
+.card-notice figure:hover {
+  transform: scale(1.06);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
 .card-notice-sugestions .card-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: self-end;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -577,9 +722,9 @@ form {
 .card-info .titulo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   margin: 0;
-  text-align: left;
+  text-align: justify;
   text-decoration: none;
 }
 
@@ -588,20 +733,20 @@ form {
   height: 1.4rem;
   margin-right: -0.4rem;
   border-radius: 1rem;
-  border: 0.1rem solid #191c20;
+  border: 0.1rem solid var(--cor-borda-2);
 }
 
 .card-info .autor {
   font-weight: 600;
   font-size: 1rem;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   margin: 0;
   text-align: center;
 }
 
 .card-info .data {
   font-size: 0.8rem;
-  color: #c2cce0;
+  color: var(--cor-texto-secundaria);
   margin: 0;
   text-align: center;
 }
@@ -613,11 +758,11 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   height: 10rem;
   padding: 0.5rem;
-  background-color: #ff0048;
-  border-top: 0.1rem solid #99a0af;
+  background-color: var(--cor-destaque);
+  border-top: 0.1rem solid var(--cor-borda-2);
 }
 
 .footer-div div {
@@ -630,19 +775,25 @@ footer {
 
 .footer-div div a {
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-texto-primaria);
   font-weight: 600;
   font-size: 2rem;
 }
 
 .footer-div div a:hover {
-  color: #6e001f;
+  color: var(--cor-destaque-hover-2);
   transition: 0.2s;
   cursor: pointer;
   text-decoration: underline;
 }
 
+.footer-div div p {
+  color: var(--cor-texto-primaria);
+}
+
 .footer-div p {
   text-align: center;
   font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-fundo-card);
 }
