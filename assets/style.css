@@ -38,7 +38,7 @@ body {
 }
 
 main {
-  background: url(https://i.pinimg.com/736x/42/38/65/423865a31be36e5172bc3ddc6e37646f.jpg);
+  background-image: url(img/fundos/background.jpg);
   background-repeat: repeat;
   background-size: 40%;
   background-position: center;
@@ -93,7 +93,7 @@ header {
 .nav-secundaria {
   display: flex;
   align-items: center;
-  gap: 5.5rem;
+  gap: 4rem;
   margin-left: -8rem;
   padding: 1rem;
   font-family: sans-serif;
@@ -102,12 +102,19 @@ header {
 .nav-secundaria div {
   display: flex;
   align-items: center;
-  gap: 1rem;
   cursor: pointer;
 }
 
 .nav-div img {
-  margin-left: -4rem;
+  margin-left: -3rem;
+}
+
+.nav-div .person {
+  margin-left: 1.8rem;
+}
+
+.nav-div .temp {
+  margin-left: 1.8rem;
 }
 
 .nav-secundaria div:hover {
