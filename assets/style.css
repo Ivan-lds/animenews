@@ -113,6 +113,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 1rem;
 }
 
 .nav-secundaria {
@@ -202,7 +203,7 @@ form {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0rem;
+  margin: 2rem 1rem 0rem 0rem;
   font-family: sans-serif;
   position: relative;
   margin-bottom: 3rem;
@@ -351,7 +352,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.2rem;
+  margin: 1.2rem 1rem 0rem 0rem;
   width: 80rem;
   font-family: sans-serif;
 }
@@ -378,7 +379,7 @@ form {
   flex-direction: column;
   align-items: start;
   justify-content: flex-start;
-  margin: 2.5rem 0rem 2.5rem 1.2rem;
+  margin: 2.5rem -1rem 2.5rem 1.2rem;
   font-family: sans-serif;
   gap: 2rem;
   max-height: 67rem;
@@ -502,7 +503,7 @@ form {
   font-family: sans-serif;
   width: 22rem;
   height: 66.5rem;
-  margin: 35rem 0rem 0rem 2rem;
+  margin: 35rem 1rem 0rem 2rem;
   color: var(--cor-texto-primaria);
   border-radius: 1rem;
   padding: 1rem 0;
@@ -583,10 +584,8 @@ form {
   background-color: var(--cor-fundo-card);
   border-radius: 1.5rem;
   padding: 1.2rem 2rem;
-  margin-top: 3rem;
-  margin-left: 1.2rem;
-  margin-right: 1.2rem;
-  width: 78rem;
+  margin: 3rem 1rem 0rem 0rem;
+  width: 76rem;
   border-top: 0.1rem solid var(--cor-destaque);
   border-bottom: 0.1rem solid var(--cor-destaque);
 }
@@ -607,7 +606,7 @@ form {
   align-items: center;
   justify-content: center;
   margin-top: 23.3rem;
-  margin-left: -1rem;
+  margin-left: -2.5rem;
 }
 
 .anuncio-secundario {
@@ -692,6 +691,7 @@ form {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-right: 1rem;
 }
 
 .sugestions-notice {
