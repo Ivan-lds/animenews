@@ -44,6 +44,8 @@ main {
 
 /*-------------------Header-------------------*/
 
+/*-------------------Header-------------------*/
+
 .header-principal {
     height: 10rem;
 }
@@ -56,6 +58,7 @@ header {
     box-sizing: border-box;
     background-color: var(--cor-fundo-1);
     gap: 4rem;
+    width: 100%;
 }
 
 .h1-header {
@@ -95,13 +98,16 @@ header {
     background-color: var(--cor-destaque);
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
 }
 
 .nav-secundaria {
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    margin-left: -3.2rem;
     padding: 0.5rem;
     font-family: sans-serif;
 }

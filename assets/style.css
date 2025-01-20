@@ -807,8 +807,13 @@ footer {
   color: var(--cor-texto-primaria);
   height: 8rem;
   padding: 0.5rem;
+  margin-left: -0.8rem;
   background-color: var(--cor-destaque);
   border-top: 0.1rem solid var(--cor-borda-2);
+}
+
+.footer-div {
+  margin-right: 1.2rem;
 }
 
 .footer-div div {
