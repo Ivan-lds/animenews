@@ -806,7 +806,6 @@ footer {
   justify-content: center;
   color: var(--cor-texto-primaria);
   height: 8rem;
-  width: 100%;
   padding: 0.5rem;
   background-color: var(--cor-destaque);
   border-top: 0.1rem solid var(--cor-borda-2);
@@ -818,7 +817,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-right: 2.6rem;
 }
 
 .footer-div div a {
