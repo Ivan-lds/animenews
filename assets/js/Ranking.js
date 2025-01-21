@@ -2,7 +2,7 @@ async function fetchTopAnimes() {
   try {
     console.log("Iniciando a busca dos top animes...");
 
-    const response = await fetch("http://localhost:3001/anime/ranking");
+    const response = await fetch("/.netlify/functions/anime-ranking");
     console.log("Requisição enviada, aguardando resposta...");
 
     if (!response.ok) {
