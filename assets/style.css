@@ -523,56 +523,43 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   justify-content: flex-start;
   text-align: left;
   font-family: sans-serif;
   font-size: 1.2rem;
-  margin-top: -2rem;
-  padding-bottom: 0.7rem;
+  margin-top: -1rem;
   width: 20rem;
-  height: 6.5rem;
+  padding: 1rem 0;
   border-bottom: 0.1rem solid var(--cor-borda-botton-ranking);
 }
 
 .ranking-anime {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.ranking-avaliacao {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  margin: -2.5rem 3rem 0rem 0rem;
-  justify-content: right;
   gap: 0.5rem;
 }
 
-.ranking-avaliacao-img {
-  width: 1rem;
+.ranking-anime h2 {
+  flex: 1;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .ranking-anime img {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   margin-left: 1rem;
   border-radius: 1rem;
   border: 0.1rem solid var(--cor-borda-2);
-}
-
-.ranking h2 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.ranking .titulo {
-  width: 8rem;
   text-align: center;
+  margin: 1rem 0;
+}
+
+.ranking-anime .titulo {
+  text-align: center;
+  width: 10rem;
 }
 
 /*-------------------Terceira Parte-------------------*/
